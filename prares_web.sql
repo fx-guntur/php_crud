@@ -15,18 +15,19 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 
--- Dumping database structure for tutor_crud
-CREATE DATABASE IF NOT EXISTS `tutor_crud` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
-USE `tutor_crud`;
+-- Dumping database structure for prares_web
+CREATE DATABASE IF NOT EXISTS `prares_web` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+USE `prares_web`;
 
--- Dumping structure for table tutor_crud.item_game
-CREATE TABLE IF NOT EXISTS `item_game` (
-  `id_item` int NOT NULL AUTO_INCREMENT,
-  `nama_item` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `harga` int NOT NULL,
-  `rarity` enum('SSR','SR','R') NOT NULL,
-  PRIMARY KEY (`id_item`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+-- Dumping structure for table prares_web.keuangan
+CREATE TABLE IF NOT EXISTS `keuangan` (
+  `id_transaksi` int NOT NULL AUTO_INCREMENT,
+  `kategori` varchar(256) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `pemasukan` int DEFAULT '0',
+  `pengeluaran` int DEFAULT '0',
+  `keterangan` varchar(256) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  PRIMARY KEY (`id_transaksi`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- Data exporting was unselected.
 
